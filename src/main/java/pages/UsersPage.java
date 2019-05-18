@@ -32,7 +32,7 @@ public class UsersPage {
         By userNameSelector = By.cssSelector("div[id=\"id_l.U.usersList.usersList\"] table");
         boolean exists = Utils.isPresent(driver, userNameSelector);
         clickResetButton();
-        Utils.waitForMilliseconds(driver, 500);
+        Utils.waitForMilliseconds(500);
         return exists;
     }
 
@@ -40,7 +40,7 @@ public class UsersPage {
         WebElement deleteButton = driver.findElement(deleteButtonSelector);
 
         deleteButton.click();
-        Utils.waitForMilliseconds(driver, 500);
+        Utils.waitForMilliseconds(500);
         driver.switchTo().alert().accept();
         return true;
     }
@@ -48,7 +48,7 @@ public class UsersPage {
     public void performSearh(String query) {
         setSearchField(query);
         clickSearchButton();
-        Utils.waitForMilliseconds(driver, 500);
+        Utils.waitForMilliseconds(500);
     }
 
     public void setSearchField(String text) {

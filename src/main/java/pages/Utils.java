@@ -14,9 +14,7 @@ public class Utils {
         wait.until(ExpectedConditions.presenceOfElementLocated(locator));
     }
 
-    public static void waitForMilliseconds(WebDriver driver, long milliseconds) {
-        // driver.manage().timeouts().implicitlyWait(milliseconds, TimeUnit.MILLISECONDS);
-
+    public static void waitForMilliseconds(long milliseconds) {
         try {
             Thread.sleep(milliseconds);
         } catch (InterruptedException e) {

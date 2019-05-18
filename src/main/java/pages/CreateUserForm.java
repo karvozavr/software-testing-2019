@@ -39,7 +39,7 @@ public class CreateUserForm {
         setForcePasswordChange(forcePasswordChange);
         clickOkButton();
 
-        Utils.waitForMilliseconds(driver, 500);
+        Utils.waitForMilliseconds(500);
 
         boolean success = !isOpen();
         if (success) {
