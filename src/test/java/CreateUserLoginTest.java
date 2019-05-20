@@ -33,7 +33,7 @@ public class CreateUserLoginTest {
 
     @Before
     public void before() {
-        System.setProperty("webdriver.chrome.driver", "/home/karvozavr/Downloads/chromedriver");
+        System.setProperty("webdriver.chrome.driver", "~/.webdriver/chromedriver");
         driver = new ChromeDriver();
         driver.get(baseUrl);
         usersPage = new UsersPage(driver);
@@ -73,6 +73,11 @@ public class CreateUserLoginTest {
     @Test
     public void testLogin6() {
         assertTrue(registerUser(":)"));
+    }
+
+    @Test
+    public void testLogin7() {
+        assertTrue(registerUser("user.name"));
     }
 
     @Test
